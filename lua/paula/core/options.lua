@@ -28,6 +28,9 @@ opt.signcolumn = "yes"
 -- backspace
 opt.backspace = "indent,eol,start"
 
+-- use system clipboard as default register
+opt.clipboard:append("unnamedplus")
+
 -- split vertical window to the right
 opt.splitright = true 
 -- split horizontal window to the bottom

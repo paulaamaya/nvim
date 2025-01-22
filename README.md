@@ -18,3 +18,4 @@ My neovim config.
 - `tn` Go to next tab.
 - `tp` Go to previous tab.
 - `tf` Open current buffer in new tab.
+- `U` Redo last change.
