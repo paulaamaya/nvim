@@ -37,8 +37,17 @@ My neovim config.
  - `Ctrl + Q` Send result to quick-fix list.
 
  **Normal Mode**
- - `ff` Find files in present working directory.
+ - `ff` Find filesin present working directory.
  - `fr` Find recent files.
  - `fs` Find string in present working directory.
  - `fc` Find string under cursor in present working directory.
+
+### Snippets
+**Insert Mode** 
+-`Ctrl + J` Next suggestion.
+-`Ctrl + K` Previous suggestion. 
+-`Ctrl + _` Show snippet suggestions.
+-`Ctrl + e` Quit suggestions.
+- ` Ctrl + f` Scroll forward through file suggestion.
+- ` Ctrl + b` Scroll backward  through file suggestion.
 

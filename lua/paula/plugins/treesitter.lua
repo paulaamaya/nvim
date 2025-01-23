@@ -1,9 +1,7 @@
 return {
   "nvim-treesitter/nvim-treesitter",
+  event = {"BufReadPre", "BufNewFile"},
   build = ":TSUpdate",
-  dependencies = {
-    "windwp/nvim-ts-autotag",
-  },
   config = function()
     local treesitter = require("nvim-treesitter.configs")
 
@@ -14,10 +12,6 @@ return {
       },
       -- indentation
       indent = { enable = true },
-      -- autotagging
-      autotag = {
-        enable = true,
-      },
       ensure_installed = {
         "lua", -- mandatory
         "vim", -- mandatory
@@ -26,6 +20,7 @@ return {
         "markdown", -- mandatory
         "markdown_inline", -- mandatory
         "latex",
+        "html",
         "c", -- mandatory
         "cpp",
         "python",
