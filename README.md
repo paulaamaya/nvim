@@ -1,7 +1,9 @@
 # nvim
 My neovim config.
 
-## Core Keymaps
+## Keymaps
+
+### Core Keymaps
 
 **Insert Mode**
 - `jk` Exit insert mode
@@ -19,3 +21,24 @@ My neovim config.
 - `tp` Go to previous tab.
 - `tf` Open current buffer in new tab.
 - `U` Redo last change.
+
+### File Explorer
+
+**Normal Mode**
+- `ee` Toggle file explorer.
+- `ef` Toggle file explorer at current file.
+- `ec` Collapse directories.
+- `er` Reload file explorer.
+
+### Fuzzy Finder
+ **Insert Mode**
+ - `Ctrl + K` Move to previous result.
+ - `Ctrl + J` Move to next result.
+ - `Ctrl + Q` Send result to quick-fix list.
+
+ **Normal Mode**
+ - `ff` Find files in present working directory.
+ - `fr` Find recent files.
+ - `fs` Find string in present working directory.
+ - `fc` Find string under cursor in present working directory.
+
