@@ -1,9 +1,9 @@
 # nvim
 My neovim config.
 
-[!> [!NOTE]
+> [!NOTE]
 > Mac Package Dependencies: `ripgrep`, `node`, 
-> Arch Package Dependencies: `ripgrep`, `nodejs`, `tree-sitter-cli`]
+> Arch Package Dependencies: `ripgrep`, `nodejs`, `tree-sitter-cli`
 
 ## Keymaps
 
@@ -52,7 +52,7 @@ My neovim config.
  - `fs` Find string in present working directory.
  - `fc` Find string under cursor in present working directory.
 
-!> [!TIP]
+> [!TIP]
 > The following telescope commands are also worth remembering:
 > - `Ctrl + U` Toggle preview up.
 > - `Ctrl + D` Toggle preview down.
