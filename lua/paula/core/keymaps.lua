@@ -28,5 +28,16 @@ keymap.set("n", "<leader>cv", "<cmd>vsplit | term<CR>", { desc = "Open terminal 
 keymap.set("n", "<leader>ch", "<cmd>split | term<CR>", { desc = "Open terminal in horizontal split." })
 keymap.set("t", "<Esc>", [[<C-\><C-n>]], { desc = "Exit terminal insert mode." })
 
--- Redo
+-- redo
 vim.keymap.set("n", "U", '<cmd>redo<CR>', { desc = "Redo" })
+
+-- delete single character without copying into register
+keymap.set("n", "x", '"_x')
+
+-- new lines without going into edit mode
+vim.keymap.set("n", "go", "o<esc>")
+vim.keymap.set("n", "gO", "O<esc>")
+
+-- move lines up and down
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")

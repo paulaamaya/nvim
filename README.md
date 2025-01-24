@@ -1,6 +1,10 @@
 # nvim
 My neovim config.
 
+[!> [!NOTE]
+> Mac Package Dependencies: `ripgrep`, `node`, 
+> Arch Package Dependencies: `ripgrep`, `nodejs`, `tree-sitter-cli`]
+
 ## Keymaps
 
 ### Core Keymaps
@@ -21,6 +25,12 @@ My neovim config.
 - `tp` Go to previous tab.
 - `tf` Open current buffer in new tab.
 - `U` Redo last change.
+- `gO` Insert new line above without going into insert mode.  
+- `go` Insert new line below without going into insert mode.  
+
+**Visual Mode**
+- `K` Move entire line up.
+- `J` Move entire line down. 
 
 ### File Explorer
 
