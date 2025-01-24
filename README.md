@@ -37,17 +37,38 @@ My neovim config.
  - `Ctrl + Q` Send result to quick-fix list.
 
  **Normal Mode**
- - `ff` Find filesin present working directory.
+ - `ff` Find files in present working directory.
  - `fr` Find recent files.
  - `fs` Find string in present working directory.
  - `fc` Find string under cursor in present working directory.
 
+!> [!TIP]
+> The following telescope commands are also worth remembering:
+> - `Ctrl + U` Toggle preview up.
+> - `Ctrl + D` Toggle preview down.
+> - `Ctrl + C` Quit telescope.
+
 ### Snippets
 **Insert Mode** 
--`Ctrl + J` Next suggestion.
--`Ctrl + K` Previous suggestion. 
--`Ctrl + _` Show snippet suggestions.
--`Ctrl + e` Quit suggestions.
+- `Ctrl + J` Next suggestion.
+- `Ctrl + K` Previous suggestion. 
+- `Ctrl + _` Show snippet suggestions.
+- `Ctrl + e` Quit suggestions.
 - ` Ctrl + f` Scroll forward through file suggestion.
 - ` Ctrl + b` Scroll backward  through file suggestion.
 
+## LSP
+**Normal Mode**
+- `lR` Show LSP reference.
+- `ld` Go to declaration.
+- `lD` Show LSP definition.
+- `lI` Show LSP type implementation.
+- `lT` Show LSP type definition.
+- `lr` Restart LSP.
+- `ca` See code actions. 
+- `rn` Smart rename.
+- `df` Show buffer diagnostics.
+- `dl` Show line diagnostics.
+- `dN` Go to previous diagnostic. 
+- `dn` Go to next diagnostic. 
+- `D` Show documentation. 
