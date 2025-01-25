@@ -2,7 +2,8 @@
 My neovim config.
 
 > [!NOTE]
-> Mac Package Dependencies: `ripgrep`, `node`, 
+> Mac Package Dependencies: `ripgrep`, `node`
+>  
 > Arch Package Dependencies: `ripgrep`, `nodejs`, `tree-sitter-cli`
 
 ## Keymaps
