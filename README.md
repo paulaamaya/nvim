@@ -67,7 +67,7 @@ My neovim config.
 - ` Ctrl + f` Scroll forward through file suggestion.
 - ` Ctrl + b` Scroll backward  through file suggestion.
 
-## LSP
+### LSP
 **Normal Mode**
 - `lR` Show LSP reference.
 - `ld` Go to declaration.
