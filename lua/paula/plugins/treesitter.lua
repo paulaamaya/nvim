@@ -1,6 +1,8 @@
 return {
   "nvim-treesitter/nvim-treesitter",
   event = {"BufReadPre", "BufNewFile"},
+  -- add markdown.nvim as treesitter module
+  dependencies = {"tadmccorkle/markdown.nvim"},
   build = ":TSUpdate",
   config = function()
     local treesitter = require("nvim-treesitter.configs")
@@ -25,6 +27,9 @@ return {
         "cpp",
         "python",
         "haskell",
+      },
+      markdown = {
+        enable = true,
       },
       incremental_selection = {
         enable = true,

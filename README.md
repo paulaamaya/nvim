@@ -1,10 +1,10 @@
-# nvim
+# NVIM
 My neovim config.
 
 > [!NOTE]
-> Mac Package Dependencies: `ripgrep`, `node`
+> Mac Package Dependencies: `ripgrep`, `node`, `bun (bunvim, pantsdown)`.
 >  
-> Arch Package Dependencies: `ripgrep`, `nodejs`, `tree-sitter-cli`
+> Arch Package Dependencies: `ripgrep`, `nodejs`, `tree-sitter-cli`, `bun (bunvim, pantsdown)`.
 
 ## Keymaps
 
