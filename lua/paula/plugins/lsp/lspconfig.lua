@@ -12,23 +12,23 @@ return {
     local on_attach = function(client, bufnr)
       -- show references
       opts.desc = "Show LSP reference."
-      keymap.set("n", "lR", "<cmd>Telescope lsp_references<CR>", opts)
+      keymap.set("n", "<leader>lR", "<cmd>Telescope lsp_references<CR>", opts)
 
       -- go to declaration
       opts.desc = "Go to declaration."
-      keymap.set("n", "ld", vim.lsp.buf.declaration, opts)
+      keymap.set("n", "<leader>ld", vim.lsp.buf.declaration, opts)
 
       -- show lsp definitions
       opts.desc = "Show LSP definition."
-      keymap.set("n", "lD", "<cmd>Telescope lsp_definitions<CR>", opts) 
+      keymap.set("n", "<leader>lD", "<cmd>Telescope lsp_definitions<CR>", opts) 
 
       -- show lsp implementations
       opts.desc = "Show LSP implementation."
-      keymap.set("n", "lI", "<cmd>Telescope lsp_implementations<CR>", opts) 
+      keymap.set("n", "<leader>lI", "<cmd>Telescope lsp_implementations<CR>", opts) 
 
       -- show lsp type definitions
       opts.desc = "Show LSP type definition."
-      keymap.set("n", "lT", "<cmd>Telescope lsp_type_definitions<CR>", opts)
+      keymap.set("n", "<leader>lT", "<cmd>Telescope lsp_type_definitions<CR>", opts)
 
       -- restart lsp 
       opts.desc = "Restart LSP."
