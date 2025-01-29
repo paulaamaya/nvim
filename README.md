@@ -1,7 +1,7 @@
 # NVIM
 My neovim config.
 
-[] Add markdown preview keymaps
+[ ] Add markdown preview keymaps
 
 > [!NOTE]
 > Mac Package Dependencies: `ripgrep`, `node`, `bun (bunvim, pantsdown)`.
