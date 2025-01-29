@@ -1,6 +1,8 @@
 # NVIM
 My neovim config.
 
+[] Add markdown preview keymaps
+
 > [!NOTE]
 > Mac Package Dependencies: `ripgrep`, `node`, `bun (bunvim, pantsdown)`.
 >  
@@ -10,10 +12,10 @@ My neovim config.
 
 ### Core Keymaps
 
-**Insert Mode**
+*Insert Mode*
 - `jk` Exit insert mode
 
-**Normal Mode**
+*Normal Mode*
 - `+` Increment number.
 - `-` Decrement number.
 - `sv` Split window vertically.
@@ -29,25 +31,25 @@ My neovim config.
 - `gO` Insert new line above without going into insert mode.  
 - `go` Insert new line below without going into insert mode.  
 
-**Visual Mode**
+*Visual Mode*
 - `K` Move entire line up.
 - `J` Move entire line down. 
 
 ### File Explorer
 
-**Normal Mode**
+*Normal Mode*
 - `ee` Toggle file explorer.
 - `ef` Toggle file explorer at current file.
 - `ec` Collapse directories.
 - `er` Reload file explorer.
 
 ### Fuzzy Finder
- **Insert Mode**
+ *Insert Mode*
  - `Ctrl + K` Move to previous result.
  - `Ctrl + J` Move to next result.
  - `Ctrl + Q` Send result to quick-fix list.
 
- **Normal Mode**
+ *Normal Mode*
  - `ff` Find files in present working directory.
  - `fr` Find recent files.
  - `fs` Find string in present working directory.
@@ -60,7 +62,7 @@ My neovim config.
 > - `Ctrl + C` Quit telescope.
 
 ### Snippets
-**Insert Mode** 
+*Insert Mode* 
 - `Ctrl + J` Next suggestion.
 - `Ctrl + K` Previous suggestion. 
 - `Ctrl + _` Show snippet suggestions.
@@ -69,7 +71,7 @@ My neovim config.
 - ` Ctrl + b` Scroll backward  through file suggestion.
 
 ### LSP
-**Normal Mode**
+*Normal Mode*
 - `lR` Show LSP reference.
 - `ld` Go to declaration.
 - `lD` Show LSP definition.
