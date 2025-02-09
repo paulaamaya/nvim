@@ -20,6 +20,9 @@ opt.wrap = true
 opt.ignorecase = true
 opt.smartcase = true 
 
+-- cursor line
+opt.cursorline = true
+
 -- terminal gui colors
 opt.termguicolors = true
 opt.background = "dark"
@@ -38,3 +41,4 @@ opt.splitbelow = true
 
 -- turn off swapfile
 opt.swapfile = false
+
