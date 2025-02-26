@@ -41,4 +41,20 @@ opt.splitbelow = true
 
 -- turn off swapfile
 opt.swapfile = false
+--
+-- Enable filetype detection
+vim.cmd('filetype plugin indent on')
 
+-- Set indentation rules for assembly
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "asm", "nasm", "masm", "s" }, -- Filetypes for assembly
+  callback = function()
+    -- Set indentation options
+    vim.opt_local.tabstop = 8       -- Number of spaces a tab counts for
+    vim.opt_local.shiftwidth = 8    -- Number of spaces to use for each step of (auto)indent
+    vim.opt_local.softtabstop = 8   -- Number of spaces a tab counts for while editing
+    vim.opt_local.expandtab = false -- Use tabs instead of spaces
+    vim.opt_local.autoindent = true -- Copy indent from current line when starting a new line
+    vim.opt_local.smartindent = true -- Do smart autoindenting when starting a new line
+    end,
+})

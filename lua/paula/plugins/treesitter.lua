@@ -25,8 +25,10 @@ return {
         "html",
         "c", -- mandatory
         "cpp",
+        "cmake",
         "python",
         "haskell",
+        "asm",
       },
       markdown = {
         enable = true,
