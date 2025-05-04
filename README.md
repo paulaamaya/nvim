@@ -4,9 +4,9 @@ My neovim config.
 - [ ] Add markdown preview keymaps
 
 > [!NOTE]
-> Mac Package Dependencies: `ripgrep`, `node`, `bun (bunvim, pantsdown)`.
+> Mac Package Dependencies: `ripgrep`, `node`.
 >  
-> Arch Package Dependencies: `ripgrep`, `nodejs`, `tree-sitter-cli`, `bun (bunvim, pantsdown)`.
+> Arch Package Dependencies: `ripgrep`, `nodejs`, `tree-sitter-cli`.
 
 ## Keymaps
 
