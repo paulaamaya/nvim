@@ -28,7 +28,6 @@ return {
         "cmake",
         "python",
         "haskell",
-        "asm",
       },
       markdown = {
         enable = true,

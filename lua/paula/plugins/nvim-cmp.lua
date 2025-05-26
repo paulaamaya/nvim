@@ -2,6 +2,7 @@ return {
   "hrsh7th/nvim-cmp",
   event = "InsertEnter",
   dependencies = {
+    "neovim/nvim-lspconfig", -- Required for LSP completion
     "hrsh7th/cmp-buffer", -- source for text in buffer
     "hrsh7th/cmp-path", -- source for file system paths
     {
@@ -15,9 +16,7 @@ return {
   },
   config = function()
     local cmp = require("cmp")
-
     local luasnip = require("luasnip")
-
     local lspkind = require("lspkind")
 
     -- loads vscode style friendly snippets
