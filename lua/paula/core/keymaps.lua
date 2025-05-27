@@ -41,3 +41,15 @@ vim.keymap.set("n", "gO", "O<esc>")
 -- move lines up and down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- format file
+keymap.set({ "n", "v" }, "<leader>fm", function()
+  -- Check if an LSP client is attached to the current buffer
+  if vim.lsp.buf_get_clients(0) then
+    -- Request formatting from the attached LSP client
+    -- { async = true } makes it non-blocking, so Neovim remains responsive
+    vim.lsp.buf.format({ async = true })
+  else
+    print("No LSP client attached to this buffer for formatting.")
+  end
+end, { desc = "LSP: Format current buffer/selection" })
