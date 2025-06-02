@@ -3,6 +3,7 @@ return {
   event = "InsertEnter",
   dependencies = {
     "neovim/nvim-lspconfig", -- Required for LSP completion
+    "hrsh7th/cmp-nvim-lsp", -- Explicitly add cmp-nvim-lsp as a dependency
     "hrsh7th/cmp-buffer", -- source for text in buffer
     "hrsh7th/cmp-path", -- source for file system paths
     {
@@ -42,7 +43,7 @@ return {
       }),
       -- sources for autocompletion
       sources = cmp.config.sources({
-        { name = "nvim-lsp"}, -- lsp
+        { name = "nvim_lsp"}, -- lsp
         { name = "luasnip" }, -- snippets
         { name = "buffer" }, -- text within current buffer
         { name = "path" }, -- file system paths
