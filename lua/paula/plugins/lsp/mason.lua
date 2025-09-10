@@ -21,7 +21,6 @@ return {
       ensure_installed = {
         "clangd",
         "pylsp",
-        "texlab",
       },
       automatic_installation = true,
     })
