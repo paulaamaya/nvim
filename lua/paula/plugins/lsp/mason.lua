@@ -21,6 +21,8 @@ return {
       ensure_installed = {
         "clangd",
         "pylsp",
+        "haskell-language-server",
+        "racket_langserver",
       },
       automatic_installation = true,
     })

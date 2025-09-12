@@ -85,8 +85,14 @@ return {
       on_attach=on_attach
     })
 
-    -- TEXLAB
-    lspconfig["texlab"].setup({
+    -- HLS
+    lspconfig["hls"].setup({
+      capabilities=capabilities,
+      on_attach=on_attach
+    })
+        
+    -- RACKET
+    lspconfig["racket_langserver"].setup({
       capabilities=capabilities,
       on_attach=on_attach
     })
