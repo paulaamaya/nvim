@@ -91,10 +91,5 @@ return {
       on_attach=on_attach
     })
         
-    -- RACKET
-    lspconfig["racket_langserver"].setup({
-      capabilities=capabilities,
-      on_attach=on_attach
-    })
   end,
 }
