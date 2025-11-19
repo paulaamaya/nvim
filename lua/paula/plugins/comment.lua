@@ -4,5 +4,6 @@ return {
   config = function()
     -- import comment plugin safely
     local comment = require("Comment")
+    comment.setup()
   end,
 }
