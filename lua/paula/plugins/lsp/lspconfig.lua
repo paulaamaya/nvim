@@ -76,19 +76,25 @@ return {
     -- CLANG
     lspconfig["clangd"].setup({
       capabilities=capabilities,
-      on_attach=on_attach
+      on_attach=on_attach,
     })
 
     -- PYLSP
     lspconfig["pylsp"].setup({
       capabilities=capabilities,
-      on_attach=on_attach
+      on_attach=on_attach,
     })
 
     -- HLS
     lspconfig["hls"].setup({
       capabilities=capabilities,
-      on_attach=on_attach
+      on_attach=on_attach,
+    })
+        
+    -- TEXLAB
+    lspconfig["texlab"].setup({
+      capabilities=capabilities,
+      on_attach=on_attach,
     })
         
   end,
