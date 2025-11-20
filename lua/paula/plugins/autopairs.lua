@@ -11,12 +11,12 @@ return {
       -- enable treesitter
       check_ts = true,
       ts_config = {
-         -- don't add pairs in lua string treesitter nodes
+        c = { "string", "comment"},
+        cpp = { "string", "comment"},
+        haskell = { "string", "comment"},
         lua = { "string" }, 
-        -- don't add pairs in javscript template_string treesitter nodes
         javascript = { "template_string" }, 
-        -- don't check treesitter on java
-        java = false, 
+        latex = { "string", "comment"},
       },
     })
 
