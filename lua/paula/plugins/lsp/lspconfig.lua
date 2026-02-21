@@ -5,7 +5,6 @@ return {
     "hrsh7th/cmp-nvim-lsp",
   },
   config = function()
-    local lspconfig = require("lspconfig")
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
     local keymap = vim.keymap
     local opts = { noremap = true, silent = true }
@@ -62,39 +61,42 @@ return {
       keymap.set("n", "]d", vim.diagnostic.goto_next, opts) 
     end
     
-    -- NOTE: assign this to every lsp server config
     local capabilities = cmp_nvim_lsp.default_capabilities()
 
     -- diagnostic symbols
-    local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
+    local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
     for type, icon in pairs(signs) do
       local hl = "DiagnosticSign" .. type
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
 
-    -- CLANG
-    lspconfig["clangd"].setup({
-      capabilities=capabilities,
-      on_attach=on_attach,
+    -- Configure servers using vim.lsp.config
+    vim.lsp.config("clangd", {
+      cmd = { "clangd" },
+      capabilities = capabilities,
+      on_attach = on_attach,
     })
+    vim.lsp.enable("clangd")
 
-    -- PYLSP
-    lspconfig["pylsp"].setup({
-      capabilities=capabilities,
-      on_attach=on_attach,
+    vim.lsp.config("pylsp", {
+      cmd = { "pylsp" },
+      capabilities = capabilities,
+      on_attach = on_attach,
     })
+    vim.lsp.enable("pylsp")
 
-    -- HLS
-    lspconfig["hls"].setup({
-      capabilities=capabilities,
-      on_attach=on_attach,
+    vim.lsp.config("hls", {
+      cmd = { "hls" },
+      capabilities = capabilities,
+      on_attach = on_attach,
     })
-        
-    -- TEXLAB
-    lspconfig["texlab"].setup({
-      capabilities=capabilities,
-      on_attach=on_attach,
+    vim.lsp.enable("hls")
+
+    vim.lsp.config("texlab", {
+      cmd = { "texlab" },
+      capabilities = capabilities,
+      on_attach = on_attach,
     })
-        
+    vim.lsp.enable("texlab")
   end,
 }
