@@ -92,11 +92,5 @@ return {
     })
     vim.lsp.enable("hls")
 
-    vim.lsp.config("texlab", {
-      cmd = { "texlab" },
-      capabilities = capabilities,
-      on_attach = on_attach,
-    })
-    vim.lsp.enable("texlab")
   end,
 }

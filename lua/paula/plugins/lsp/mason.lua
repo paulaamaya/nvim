@@ -22,7 +22,6 @@ return {
         "clangd",
         "pylsp",
         "haskell-language-server",
-        "texlab",
       },
       automatic_installation = true,
     })
