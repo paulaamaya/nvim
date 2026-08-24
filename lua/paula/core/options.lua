@@ -12,9 +12,10 @@ opt.tabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
+opt.smartindent = true
 
--- disable line wrapping
-opt.wrap = true
+-- line wrapping
+opt.wrap = false
 
 -- ignore case when searching, except when mixed
 opt.ignorecase = true
@@ -29,7 +30,7 @@ opt.background = "dark"
 opt.signcolumn = "yes"
 
 -- backspace
-opt.backspace = "indent,eol,start"
+opt.backspace = {"indent", "eol" ,"start"}
 
 -- use system clipboard as default register
 opt.clipboard:append("unnamedplus")
@@ -38,10 +39,11 @@ opt.clipboard:append("unnamedplus")
 opt.splitright = true 
 -- split horizontal window to the bottom
 opt.splitbelow = true 
+opt.splitkeep = "cursor"
 
 -- turn off swapfile
 opt.swapfile = false
---
+
 -- Enable filetype detection
 vim.cmd('filetype plugin indent on')
 
