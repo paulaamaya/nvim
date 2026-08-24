@@ -1,11 +1,12 @@
 return {
-  "hrsh7th/nvim-cmp",
+  "hrsh7th/nvim-cmp", -- source for core completion engine
   event = "InsertEnter",
   dependencies = {
     "neovim/nvim-lspconfig", -- Required for LSP completion
     "hrsh7th/cmp-nvim-lsp", -- Explicitly add cmp-nvim-lsp as a dependency
     "hrsh7th/cmp-buffer", -- source for text in buffer
     "hrsh7th/cmp-path", -- source for file system paths
+    "hrsh7th/cmp-cmdline", -- source for command completion
     {
       "L3MON4D3/LuaSnip",
       -- follow latest release.
@@ -39,7 +40,7 @@ return {
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
         ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
         ["<C-e>"] = cmp.mapping.abort(), -- close completion window
-        ["<CR>"] = cmp.mapping.confirm({ select = false }),
+        ["<CR>"] = cmp.mapping.confirm({ select = true }),
       }),
       -- sources for autocompletion
       sources = cmp.config.sources({
@@ -56,6 +57,13 @@ return {
           ellipsis_char = "...",
         }),
       },
+    })
+
+    --command completion
+    cmp.setup.cmdline(":", {
+      sources = cmp.config.sources({
+        { name = "cmdline"},
+      }),
     })
   end,
 }
