@@ -10,13 +10,14 @@ return {
     autopairs.setup({
       -- enable treesitter
       check_ts = true,
+      map_cr = true,    -- autocomplete pairs on <CR>
+      map_bs = true,    -- delte pairs on <BS>
       ts_config = {
         c = { "string", "comment"},
         cpp = { "string", "comment"},
         haskell = { "string", "comment"},
         lua = { "string" }, 
         javascript = { "template_string" }, 
-        latex = { "string", "comment"},
       },
     })
 
