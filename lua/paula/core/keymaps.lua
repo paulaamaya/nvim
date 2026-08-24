@@ -5,11 +5,14 @@ local keymap = vim.keymap
 
 -- ====== GENERAL ======
 -- Increment/Decrement numbers
-keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) 
-keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" })
+keymap.set("n", "+", "<C-a>", { desc = "Increment number" }) 
+keymap.set("n", "-", "<C-x>", { desc = "Decrement number" })
 
 -- Better Redo
 keymap.set("n", "U", "<cmd>redo<CR>", { desc = "Redo" })
+
+-- Select all
+keymap.set("n", "<C-a>", "gg<S-v>G")
 
 -- Delete without yank
 keymap.set("n", "x", '"_x')
@@ -34,9 +37,9 @@ keymap.set("n", "<leader>wx", "<cmd>close<CR>", { desc = "Close current split" }
 -- ====== TAB MANAGEMENT (<leader>t) ======
 keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" }) 
 keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" }) 
-keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) 
-keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) 
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) 
+keymap.set("n", "<tab>", "<cmd>tabn<CR>", { desc = "Go to next tab" }) 
+keymap.set("n", "<s-tab>", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) 
 
 -- ====== TERMINAL MANAGEMENT (<leader>o) ======
 keymap.set("n", "<leader>ov", "<cmd>vsplit | term<CR>", { desc = "Open terminal vertical" })
