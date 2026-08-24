@@ -3,6 +3,7 @@ return {
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
+    "nvim-telescope/telescope.nvim",
   },
   config = function()
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
@@ -11,7 +12,6 @@ return {
 
     local on_attach = function(client, bufnr)
       opts.buffer = bufnr
-
       -- GOTO MAPPINGS
       opts.desc = "Show LSP references"
       keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts)
@@ -70,7 +70,7 @@ return {
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
 
-    -- Configure servers using vim.lsp.config
+    -- Configure servers
     vim.lsp.config("clangd", {
       cmd = { "clangd" },
       capabilities = capabilities,
@@ -92,5 +92,18 @@ return {
     })
     vim.lsp.enable("hls")
 
+    vim.lsp.config("cssls", {
+      cmd = { "cssls" },
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+    vim.lsp.enable("cssls")
+
+    vim.lsp.config("ts_ls", {
+      cmd = { "ts_ls" },
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+    vim.lsp.enable("ts_ls")
   end,
 }

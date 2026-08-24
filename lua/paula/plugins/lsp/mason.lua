@@ -22,6 +22,8 @@ return {
         "clangd",
         "pylsp",
         "haskell-language-server",
+        "css-lsp",
+        "typescript-language-server",
       },
       automatic_installation = true,
     })
